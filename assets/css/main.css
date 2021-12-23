@@ -101,7 +101,10 @@ input, select, textarea {
 	body {
 		background: #ffffff;
 	}
-
+		body.align-canvas{
+			margin-top:auto;
+		}
+		
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
@@ -112,6 +115,15 @@ input, select, textarea {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
+
+
+
+/*canvas*/
+	canvas {
+		margin: 0 auto 0 auto;
+		display: block;
+		border: 5px solid black;
+	}
 
 /* Type */
 
@@ -2572,7 +2584,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -3161,6 +3173,10 @@ input, select, textarea {
 			}
 
 		}
+
+
+
+
 
 /* Footer */
 

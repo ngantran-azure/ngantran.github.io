@@ -8,7 +8,7 @@ let colorPicker;
 function setup() {
 
   let cnv = createCanvas(600, 600);
-  cnv.parent('thisShnit')
+  cnv.parent('thisShnit');
   background(255);
 
   colorPicker = createColorPicker('#ed225d');

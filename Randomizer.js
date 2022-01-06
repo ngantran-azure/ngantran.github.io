@@ -1,4 +1,4 @@
-let flavour = [
+var flavour = [
   {tag:"beets"},
   {tag:"broccoli"},
   {tag:"carrot"},
@@ -7,7 +7,7 @@ let flavour = [
   {tag:"soap"},
   {tag:"strawberry"}
   ];
-let topping = [
+var topping = [
   {tag: "beans"},
   {tag:"boba"},
   {tag: "broccoli"},
@@ -16,36 +16,37 @@ let topping = [
   {tag: "pearls"}
   ];
 
-let flavour1Index;
-let flavour2Index;
-let flavour3Index;
-let topping1Index;
-let topping2Index;
-let receipt;
-let cuplid;
-let cupstraw;
-let flv = [];
-let toppy = [];
-let button;
+var flavour1Index;
+var flavour2Index;
+var flavour3Index;
+var topping1Index;
+var topping2Index;
+var receipt;
+var cuplid;
+var cupstraw;
+var flv = [];
+var toppy = [];
+var button;
 
 
 function preload() {
   receipt = loadImage('Randomizer-assets/a receipt.PNG');
   cupstraw = loadImage('Randomizer-assets/cup straw.PNG');
-  cuplid = loadImage('https://raw.githubusercontent.com/ngantran-azure/Randomizer101/main/assets/cup%20lid.png');
+  cuplid = loadImage('Randomizer-assets/cup lid.PNG');
 
   for(let i = 0; i <= 6 ; i++) {
-    flv[i] = loadImage(`assets/flv${i}.PNG`)
+    flv[i] = loadImage(`Randomizer-assets/flv${i}.PNG`)
   };
 
   for(let n = 0; n<=5; n++) {
-    toppy[n] = loadImage(`assets/top${n}.PNG`)
+    toppy[n] = loadImage(`Randomizer-assets/top${n}.PNG`)
   }
 
 }
 
 function setup() {
-  createCanvas(600, 600);
+  let cnv =createCanvas(600, 600);
+  cnv.parent('thisShnit');
   background(42,169,196);
 
   textStyle(BOLD)
@@ -61,6 +62,7 @@ function setup() {
   button = createButton("Click to make your order");
   button.mousePressed(buttonPressed);
   button.class("randomizerButton");
+  button.parent('thisShnit');
 }
 
 
